@@ -1,3 +1,60 @@
-p {
-  color: #f00;
+body {
+  display: grid;
+  place-items: center;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: purple;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: purple;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: purple;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+li {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: purple;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 90px 100px 100px;
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.list button {
+  font-size: 1rem;
 }
