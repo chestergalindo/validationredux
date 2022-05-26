@@ -3,31 +3,30 @@ import './App.css';
 
 export const App = () => {
   const { register, handleSubmit } = useForm();
-  const ListProduct: any = [];
-  const onSubmit = (data: any) => {
-    console.log(data);
-    ListProduct.push(data.searchWord);
-    console.log({ ListProduct });
-  };
+  // const [listProducts, setListProducts] = useState([]);
+  const l: any = [];
+
+  const onSubmit = (data: { searchWord: string }) => l.push(data.searchWord);
+
+  console.log({ l });
 
   return (
     <body>
       <div className="App">
         <h1>Listado de Mercado</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <input
-            type="text"
-            aria-label=""
-            {...register('searchWord')}
-            placeholder="Articulos de mercado"
-          />
-          <button type="submit">Buscar</button>
+          <input type="text" {...register('searchWord')} placeholder="Articulos de mercado" />
+          <input type="submit" placeholder=" test  " />
         </form>
         <div className="list">
-          <li>Milk</li>
-          <input type="text" placeholder="0" aria-label="5" />
-          <button>Agregar</button>
-          <button>eliminar</button>
+          {/* {listProducts.map(() => ( */}
+          <>
+            <li>Milk</li>
+            <input type="text" placeholder="0" aria-label="5" />
+            <button>Agregar</button>
+            <button>eliminar</button>
+          </>
+          {/* ))} */}
         </div>
       </div>
     </body>
